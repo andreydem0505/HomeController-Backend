@@ -18,7 +18,7 @@ class FirestoreService : Database {
 
     @Bean
     fun getDB() {
-        val serviceAccount: InputStream = FileInputStream("../etc/secrets/firebase.json")
+        val serviceAccount: InputStream = FileInputStream("firebase.json")
         val credentials = GoogleCredentials.fromStream(serviceAccount)
         val options = FirebaseOptions.builder()
             .setCredentials(credentials)
