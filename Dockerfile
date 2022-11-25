@@ -1,5 +1,4 @@
 FROM eclipse-temurin:17-jdk-alpine
-VOLUME /tmp
-COPY build/libs/HomeControllerBackend-0.0.1-SNAPSHOT.jar app.jar
+COPY .
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","build/libs/HomeControllerBackend-0.0.1-SNAPSHOT.jar"]
